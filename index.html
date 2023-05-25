@@ -1,14 +1,58 @@
  <!DOCTYPE html>
 <html>
-<head>
+    <head>
 <title>Pilot BSCAV</title>  
-</head>
+        <style>
+#my-div1
+{
+    border: #000 1px solid;
+    width    : 85%;
+    height   : 95%;
+    overflow : hidden;
+    position : absolute;
+       align : left;
+}
+ 
+#my-div2
+{
+    border: #000 1px solid;
+    width    : 200px;
+    height   : 520px;
+    overflow : hidden;
+    position : fixed;
+	top : 5px;
+	right : 5px;
+       align : right;
 
-<body>
+}
+ 
+#my-iframe1
+{
+    position : relative;
+       align : left;
+    left     : 5px;
+    width    : 1500px;
+    height   : 800px;
+}
 
-<iframe src="https://www.vmixcall.com/" allow="camera *;microphone *" style="position:relative; top: 1px; left: 0px;height:750px;width:90%;" align="left" ></iframe>
-<div style="overflow: hidden">
-<iframe scrolling="no" src="https://bscav3.ngrok.io/tablet3?cols=1&layout=infinite&noconfigure=1&nofullscreen=1&noheadings=1&pages=2&rows=3" style="position:relative; margine-left: 150px; left: 5px; top: 1px; right: 5px;height:520px;width:295px" align="right"></iframe>
-</div>
-</body>
+#my-iframe2
+{
+    position : absolute;
+       align : right;
+    right : 0px;
+
+    width    : 300px;
+    height   : 520px;
+clip: rect(0px,360px,650px,80px);
+}
+</style>
+    <body>
+        <div id="my-div1">
+           <iframe src="https://www.vmixcall.com/" allow="camera *;microphone *" id="my-iframe1" frameborder="0" scrolling="no"></iframe>
+       </div>
+        <div id="my-div2">
+	<iframe src="https://bscav3.ngrok.io/tablet3?cols=1&layout=infinite&noconfigure=1&nofullscreen=1&noheadings=1&pages=2&rows=3" 
+	id="my-iframe2" frameborder="0" scrolling="no"></iframe>
+       </div>
+   </body>
 </html>
